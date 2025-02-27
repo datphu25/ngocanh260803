@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tỏ Tình</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .hidden {
+            display: none;
+        }
+        .angry {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ngọc Anh! Em có yêu anh không?</h2>
+    <p>(Nhập "Có" hoặc "Không")</p>
+    <input type="text" id="answer" placeholder="Nhập câu trả lời...">
+    <button onclick="checkAnswer()">Trả lời</button>
+    <p id="response"></p>
+    
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById("answer").value.trim().toLowerCase();
+            let response = document.getElementById("response");
+            
+            if (answer === "có") {
+                response.innerHTML = "Anh cũng yêu Ngọc Anh ❤️";
+            } else if (answer === "không") {
+                response.innerHTML = "😡 em có 1 phút để nhập lại câu trả lời !";
+            } else {
+                response.innerHTML = "Hãy nhập 'Có' hoặc 'Không'.";
+            }
+        }
+    </script>
+</body>
+</html>
